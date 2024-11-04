@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+.aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+.aspect-w-16 > img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+.text-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.text-shadow-md {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+/* Swiper Styles */
+.experienceSwiper {
+    @apply w-full relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    @apply text-primary opacity-0 transition-opacity duration-300;
+}
+
+.experienceSwiper:hover .swiper-button-next,
+.experienceSwiper:hover .swiper-button-prev {
+    @apply opacity-100;
+}
+
+.swiper-pagination-bullet {
+    @apply bg-gray-300;
+}
+
+.swiper-pagination-bullet-active {
+    @apply bg-primary;
+}
+
+.swiper-slide {
+    @apply opacity-0 transition-opacity duration-500;
+}
+
+.swiper-slide-active {
+    @apply opacity-100;
+}

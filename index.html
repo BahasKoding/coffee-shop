@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Serenity Sips - Japanese-Inspired Coffee Shop</title>
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-secondary text-gray-800 font-sans">
+    <nav class="fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#home" class="text-2xl font-bold transition-colors duration-300">Serenity Sips</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="transition duration-300">Home</a>
+                    <a href="#about" class="transition duration-300">About</a>
+                    <a href="#coffee" class="transition duration-300">Our Coffee</a>
+                    <a href="#experience" class="transition duration-300">Experience</a>
+                    <a href="#contact" class="transition duration-300">Contact</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden focus:outline-none transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="container mx-auto px-4 py-2">
+                <a href="#home" class="block py-2 transition duration-300">Home</a>
+                <a href="#about" class="block py-2 transition duration-300">About</a>
+                <a href="#coffee" class="block py-2 transition duration-300">Our Coffee</a>
+                <a href="#experience" class="block py-2 transition duration-300">Experience</a>
+                <a href="#contact" class="block py-2 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517231925375-bf2cb42917a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 id="header-title" class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-shadow-lg">Discover Serenity in Every Sip</h1>
+            <p id="header-subtitle" class="text-lg md:text-xl mb-8 text-shadow-md">Experience Coffee Like Never Before</p>
+            <a id="header-cta" href="#about" class="bg-primary text-white py-2 px-6 md:py-3 md:px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 shadow-lg">Explore Our Menu</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 id="about-title" class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Savor the Harmony of Tradition and Taste</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div id="about-text" class="md:w-1/2 mb-8 md:mb-0">
+                    <p class="text-base md:text-lg">Our coffee shop is more than a place to drink coffee; it's a sanctuary of peace where ancient Japanese aesthetics blend seamlessly with modern flavors. From the minimalistic decor to the carefully curated coffee beans, everything invites calm and relaxation.</p>
+                </div>
+                <div id="about-image" class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Japanese-inspired coffee shop interior" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Section -->
+    <section id="coffee" class="py-16 md:py-20 bg-secondary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Handcrafted Coffee in a Zen-Inspired Setting</h2>
+            <div id="coffee-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-48 object-cover" alt="Pour-over coffee">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Pour-Over</h3>
+                        <p>Experience the pure essence of our single-origin beans with our meticulously crafted pour-over coffee.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-48 object-cover" alt="Matcha latte">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Matcha Latte</h3>
+                        <p>Indulge in the perfect balance of earthy matcha and creamy milk, a true Japanese-inspired delight.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-48 object-cover" alt="Cold brew">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Cold Brew</h3>
+                        <p>Smooth and refreshing, our cold brew is steeped for 12 hours to bring out the coffee's natural sweetness.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-48 object-cover" alt="Espresso">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Espresso</h3>
+                        <p>Our signature espresso blend offers a rich, full-bodied flavor with notes of chocolate and caramel.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-48 object-cover" alt="Cappuccino">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Cappuccino</h3>
+                        <p>A classic Italian coffee drink, our cappuccino features equal parts espresso, steamed milk, and milk foam.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-48 object-cover" alt="Iced Latte">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Iced Latte</h3>
+                        <p>Cool down with our refreshing iced latte, made with our signature espresso and chilled milk over ice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for selected coffee item -->
+    <div id="coffee-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <h3 id="modal-title" class="text-2xl font-semibold mb-4"></h3>
+            <p id="modal-description" class="mb-4"></p>
+            <button id="modal-close" class="bg-primary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Close</button>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16 xl:px-24 max-w-[1440px]">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Coffee Experience</h2>
+            
+            <!-- Swiper -->
+            <div class="swiper experienceSwiper">
+                <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                            <div class="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                    alt="Artisanal Coffee Brewing"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/10"></div>
+                            </div>
+                            <div class="space-y-6">
+                                <h3 class="text-2xl md:text-3xl font-bold">Artisanal Coffee Brewing</h3>
+                                <p class="text-gray-600 leading-relaxed">Experience the art of perfect coffee brewing with our skilled baristas. Using premium beans and precise techniques, we create coffee that delights all your senses.</p>
+                                <blockquote class="relative p-6 bg-white rounded-xl shadow-md">
+                                    <div class="absolute -top-4 left-6 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="italic text-gray-700 mb-4">"The best cup of coffee I've ever had. The baristas here are true artists who understand the science of coffee."</p>
+                                    <footer class="flex items-center space-x-3">
+                                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                                            <i class="fas fa-user text-gray-400"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Michael R.</p>
+                                            <p class="text-sm text-gray-500">Coffee Connoisseur</p>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                            <div class="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                    alt="Sustainable Coffee Journey"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/10"></div>
+                            </div>
+                            <div class="space-y-6">
+                                <h3 class="text-2xl md:text-3xl font-bold">Sustainable Coffee Journey</h3>
+                                <p class="text-gray-600 leading-relaxed">We source our beans directly from ethical farmers, ensuring every cup supports sustainable practices and fair trade. Join us in making coffee that's good for both people and planet.</p>
+                                <blockquote class="relative p-6 bg-white rounded-xl shadow-md">
+                                    <div class="absolute -top-4 left-6 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="italic text-gray-700 mb-4">"Knowing that my daily coffee supports sustainable farming makes it taste even better. The quality is consistently outstanding."</p>
+                                    <footer class="flex items-center space-x-3">
+                                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                                            <i class="fas fa-user text-gray-400"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Emma T.</p>
+                                            <p class="text-sm text-gray-500">Sustainability Advocate</p>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                            <div class="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                    alt="Community Coffee Hub"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/10"></div>
+                            </div>
+                            <div class="space-y-6">
+                                <h3 class="text-2xl md:text-3xl font-bold">Community Coffee Hub</h3>
+                                <p class="text-gray-600 leading-relaxed">More than just a coffee shop, we're a gathering place for coffee lovers. Join our weekly tastings, brewing workshops, and community events to deepen your coffee appreciation.</p>
+                                <blockquote class="relative p-6 bg-white rounded-xl shadow-md">
+                                    <div class="absolute -top-4 left-6 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="italic text-gray-700 mb-4">"The coffee workshops here opened my eyes to a whole new world of coffee. The community feeling is amazing!"</p>
+                                    <footer class="flex items-center space-x-3">
+                                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                                            <i class="fas fa-user text-gray-400"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">David K.</p>
+                                            <p class="text-sm text-gray-500">Regular Workshop Participant</p>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="swiper-button-next after:text-primary"></div>
+                <div class="swiper-button-prev after:text-primary"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-20 bg-secondary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12" data-aos="fade-up">Your Journey to Coffee Perfection Begins Here</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-4">Visit Us</h3>
+                    <p class="mb-6">Experience the perfect blend of Japanese tranquility and exceptional coffee in our serene atmosphere.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-primary mr-3"></i>
+                            123 Zen Street, Cityville, ST 12345
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            info@serenitysips.com
+                        </li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold mt-8 mb-4">Hours of Operation</h3>
+                    <ul class="space-y-2">
+                        <li>Monday - Friday: 7am - 7pm</li>
+                        <li>Saturday - Sunday: 8am - 6pm</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold mb-4">Make a Reservation</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="tel" placeholder="Your Phone" class="w-full px-4 py-2 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="date" class="w-full px-4 py-2 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <select class="w-full px-4 py-2 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="">Select Time</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                        </select>
+                        <textarea placeholder="Special Requests" rows="4" class="w-full px-4 py-2 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        <button type="submit" class="w-full bg-primary text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">Reserve a Table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="text-xl font-semibold mb-4">Serenity Sips</h5>
+                    <p class="mb-2">123 Zen Street<br>Cityville, ST 12345</p>
+                    <p class="mb-2">Phone: (555) 123-4567</p>
+                    <p>Email: info@serenitysips.com</p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4">Hours</h5>
+                    <p class="mb-2">Monday - Friday: 7am - 7pm</p>
+                    <p class="mb-2">Saturday - Sunday: 8am - 6pm</p>
+                    <h5 class="text-xl font-semibold mt-6 mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary transition duration-300">Menu</a></li>
+                        <li><a href="#" class="hover:text-primary transition duration-300">Events</a></li>
+                        <li><a href="#" class="hover:text-primary transition duration-300">Gift Cards</a></li>
+                        <li><a href="#" class="hover:text-primary transition duration-300">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4">Newsletter</h5>
+                    <p class="mb-4">Subscribe to our newsletter for updates and exclusive offers.</p>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Subscribe</button>
+                    </form>
+                </div>
+                <div>
+                    <h5 class="text-xl font-semibold mb-4">Find Us</h5>
+                    <div class="w-full h-48 rounded overflow-hidden mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968459391!3d40.74844797932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1616562128215!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-xl font-semibold mb-2">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-primary transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-2xl hover:text-primary transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-primary transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-primary transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="mb-4 md:mb-0">&copy; 2023 Serenity Sips. All rights reserved.</p>
+                <div class="flex flex-wrap justify-center md:justify-end space-x-4">
+                    <a href="#" class="hover:text-primary transition duration-300 mb-2 md:mb-0">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition duration-300 mb-2 md:mb-0">Terms of Service</a>
+                    <a href="#" class="hover:text-primary transition duration-300">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="fixed bottom-8 right-8 z-50 bg-primary hover:bg-opacity-90 text-white p-3 opacity-0 transition-opacity duration-300 shadow-lg">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
